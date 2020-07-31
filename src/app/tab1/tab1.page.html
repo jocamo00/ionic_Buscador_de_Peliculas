@@ -14,4 +14,15 @@
 
     </ion-slide>
   </ion-slides>
+
+  <h3>Populares</h3>
+  <ion-slides [options]="slideOpts">
+    <ion-slide class="space-slider" *ngFor="let pelicula of popularMovies">
+      
+      <ion-card>
+        <img class="poster" [src]="pelicula.poster_path | imagen">
+      </ion-card>
+
+    </ion-slide>
+  </ion-slides>
 </ion-content>
