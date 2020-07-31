@@ -20,6 +20,7 @@ export class DetalleComponent implements OnInit {
   ngOnInit() {
 
     this.getMovieDetail();
+
   }
 
   getMovieDetail() {
