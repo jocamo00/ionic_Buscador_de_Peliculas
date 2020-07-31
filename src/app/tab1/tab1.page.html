@@ -25,4 +25,15 @@
 
     </ion-slide>
   </ion-slides>
+
+  <h3>Mejor puntuación</h3>
+  <ion-slides [options]="slideOpts">
+    <ion-slide class="space-slider" *ngFor="let pelicula of topRatedMovies">
+      
+      <ion-card>
+        <img class="poster" [src]="pelicula.poster_path | imagen">
+      </ion-card>
+
+    </ion-slide>
+  </ion-slides>
 </ion-content>

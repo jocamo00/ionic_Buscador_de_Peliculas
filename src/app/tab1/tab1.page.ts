@@ -11,6 +11,7 @@ export class Tab1Page implements OnInit{
 
   upcomingMovies: Pelicula[] = [];
   popularMovies: Pelicula[] = [];
+  topRatedMovies: Pelicula[] = [];
 
   slideOpts = {
     slidesPerView: 1.3,
@@ -23,6 +24,7 @@ export class Tab1Page implements OnInit{
   ngOnInit() {
     this.getUpcoming();
     this.getpopular();
+    this.getTopRated();
   }
 
   getUpcoming() {
@@ -35,8 +37,14 @@ export class Tab1Page implements OnInit{
   getpopular() {
     this.moviesService.getPopular()
     .subscribe( resp => {
-      console.log('populares', resp);
       this.popularMovies = resp.results;
+    });
+  }
+
+  getTopRated() {
+    this.moviesService.getTopRated()
+    .subscribe( resp => {
+      this.topRatedMovies = resp.results;
     });
   }
 
