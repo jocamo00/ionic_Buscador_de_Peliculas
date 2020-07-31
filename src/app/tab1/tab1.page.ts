@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../service/movies.service';
 import { Pelicula } from '../interfaces/interfaces';
+import { ModalController } from '@ionic/angular';
+import { DetalleComponent } from '../components/detalle/detalle.component';
 
 @Component({
   selector: 'app-tab1',
@@ -19,7 +21,8 @@ export class Tab1Page implements OnInit{
     spaceBetween: -10
   };
 
-  constructor( private moviesService: MoviesService ) {}
+  constructor( private moviesService: MoviesService,
+               private modalCtrl: ModalController ) {}
 
   ngOnInit() {
     this.getUpcoming();
@@ -46,6 +49,17 @@ export class Tab1Page implements OnInit{
     .subscribe( resp => {
       this.topRatedMovies = resp.results;
     });
+  }
+
+  async verDetalle( id: string ) {
+    const modal = await this.modalCtrl.create({
+      component: DetalleComponent,
+      componentProps: {
+        id
+      }
+    });
+
+    modal.present();
   }
 
 }

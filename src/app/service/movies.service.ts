@@ -18,13 +18,21 @@ export class MoviesService {
     return this.http.get<RespuestaMDB>(`${URL}/movie/upcoming?api_key=${apiKey}&language=es&page=1&region=es`);
   }
 
+
   getPopular() {
 
     return this.http.get<RespuestaMDB>(`${URL}/movie/popular?api_key=${apiKey}&language=es&page=1`);
   }
 
+
   getTopRated() {
 
     return this.http.get<RespuestaMDB>(`${URL}/movie/top_rated?api_key=${apiKey}&language=es&page=1`);
+  }
+
+
+  getMovieDetail( id: string ) {
+
+    return this.http.get<RespuestaMDB>(`${URL}/movie/{movie_id}?api_key=${apiKey}&language=es`);
   }
 }

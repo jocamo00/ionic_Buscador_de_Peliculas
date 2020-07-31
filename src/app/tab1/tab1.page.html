@@ -7,7 +7,7 @@
   <ion-slides [options]="slideOpts">
     <ion-slide *ngFor="let pelicula of upcomingMovies">
       
-      <ion-card>
+      <ion-card (click)="verDetalle(pelicula.id)">
         <img [src]="pelicula.backdrop_path | imagen">
         <h5>{{ pelicula.title }}</h5>
       </ion-card>
@@ -19,7 +19,7 @@
   <ion-slides [options]="slideOpts">
     <ion-slide class="space-slider" *ngFor="let pelicula of popularMovies">
       
-      <ion-card>
+      <ion-card (click)="verDetalle(pelicula.id)">
         <img class="poster" [src]="pelicula.poster_path | imagen">
       </ion-card>
 
@@ -30,7 +30,7 @@
   <ion-slides [options]="slideOpts">
     <ion-slide class="space-slider" *ngFor="let pelicula of topRatedMovies">
       
-      <ion-card>
+      <ion-card (click)="verDetalle(pelicula.id)">
         <img class="poster" [src]="pelicula.poster_path | imagen">
       </ion-card>
 
