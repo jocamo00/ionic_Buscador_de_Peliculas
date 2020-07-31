@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { RespuestaMDB } from '../interfaces/interfaces';
+import { RespuestaMDB, PeliculaDetalle } from '../interfaces/interfaces';
 
 const URL = environment.url;
 const apiKey = environment.apiKey;
@@ -33,6 +33,6 @@ export class MoviesService {
 
   getMovieDetail( id: string ) {
 
-    return this.http.get<RespuestaMDB>(`${URL}/movie/{movie_id}?api_key=${apiKey}&language=es`);
+    return this.http.get<PeliculaDetalle>(`${URL}/movie/${id}?api_key=${apiKey}&language=es`);
   }
 }

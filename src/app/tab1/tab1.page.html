@@ -32,6 +32,7 @@
       
       <ion-card (click)="verDetalle(pelicula.id)">
         <img class="poster" [src]="pelicula.poster_path | imagen">
+        <h5>{{ pelicula.vote_average }}</h5>
       </ion-card>
 
     </ion-slide>
