@@ -38,6 +38,6 @@ export class MoviesService {
 
   getActorsMovies( id: string ) {
 
-    return this.http.get<RespuestaCredits>(`${URL}/credit/${id}?api_key=${apiKey}`);
+    return this.http.get<RespuestaCredits>(`${URL}/movie/${id}/credits?api_key=${apiKey}`);
   }
 }
