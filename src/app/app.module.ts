@@ -18,6 +18,9 @@ import { DetalleComponent } from './components/detalle/detalle.component';
     DetalleComponent
   ],
   entryComponents: [],
+  exports: [
+    DetalleComponent
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
