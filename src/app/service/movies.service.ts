@@ -40,4 +40,9 @@ export class MoviesService {
 
     return this.http.get<RespuestaCredits>(`${URL}/movie/${id}/credits?api_key=${apiKey}`);
   }
+
+  searchMovies( texto: string) {
+
+    return this.http.get<RespuestaCredits>(`${URL}/search/movie?query=${texto}&api_key=${apiKey}&language=es&include_image_language=es`);
+  }
 }
