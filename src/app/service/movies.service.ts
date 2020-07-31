@@ -22,4 +22,9 @@ export class MoviesService {
 
     return this.http.get<RespuestaMDB>(`${URL}/movie/popular?api_key=${apiKey}&language=es&page=1`);
   }
+
+  getTopRated() {
+
+    return this.http.get<RespuestaMDB>(`${URL}/movie/top_rated?api_key=${apiKey}&language=es&page=1`);
+  }
 }
