@@ -27,7 +27,8 @@
       <ion-col size="6" *ngFor="let pelicula of peliculas">
 
         <ion-card (click)="verDetalle(pelicula.id)">
-          <img [src]="'https://image.tmdb.org/t/p/w500/' + pelicula.poster_path">
+          <img *ngIf="!pelicula.poster_path" src="/assets/no-image-banner.jpg">
+          <img *ngIf="pelicula.poster_path" [src]="'https://image.tmdb.org/t/p/w500/' + pelicula.poster_path">
 
           <ion-card-header>
             <ion-card-subtitle>{{ pelicula.release_date }}</ion-card-subtitle>

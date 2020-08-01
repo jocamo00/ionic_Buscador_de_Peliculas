@@ -15,8 +15,14 @@ export class Tab1Page implements OnInit{
   popularMovies: Pelicula[] = [];
   topRatedMovies: Pelicula[] = [];
 
+  slideOptsEstrenos = {
+    slidesPerView: 1.1,
+    freeMode: true,
+    spaceBetween: -10
+  };
+
   slideOpts = {
-    slidesPerView: 1.3,
+    slidesPerView: 3.3,
     freeMode: true,
     spaceBetween: -10
   };

@@ -28,9 +28,13 @@
 
 .poster {
     width: 130px !important;
-    height: 160px !important;
+    height: auto !important;
 }
 
-.space-slider {
-    width: 134.545px !important;
+.title {
+    text-align: center;
+}
+
+.sub-title {
+    margin-left: 15px;
 }

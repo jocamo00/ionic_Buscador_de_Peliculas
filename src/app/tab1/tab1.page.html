@@ -1,37 +1,38 @@
 
-<ion-content [fullscreen]="true">
+<ion-content>
 
-  <h1>PelisApp</h1>
-
-  <h3>Próximos estrenos</h3>
-  <ion-slides [options]="slideOpts">
+  <h5 class="sub-title">Próximos estrenos</h5>
+  <ion-slides [options]="slideOptsEstrenos">
     <ion-slide *ngFor="let pelicula of upcomingMovies">
       
       <ion-card (click)="verDetalle(pelicula.id)">
-        <img [src]="pelicula.backdrop_path | imagen">
+        <img *ngIf="!pelicula.backdrop_path" src="/assets/no-image-banner.jpg">
+        <img *ngIf="pelicula.backdrop_path" [src]="'https://image.tmdb.org/t/p/w500/' + pelicula.backdrop_path">
         <h5>{{ pelicula.title }}</h5>
       </ion-card>
 
     </ion-slide>
   </ion-slides>
 
-  <h3>Populares</h3>
+  <h5 class="sub-title">Populares</h5>
   <ion-slides [options]="slideOpts">
-    <ion-slide class="space-slider" *ngFor="let pelicula of popularMovies">
+    <ion-slide class="poster" *ngFor="let pelicula of popularMovies">
       
       <ion-card (click)="verDetalle(pelicula.id)">
-        <img class="poster" [src]="pelicula.poster_path | imagen">
+        <img *ngIf="!pelicula.poster_path" src="/assets/no-image-banner.jpg">
+        <img *ngIf="pelicula.poster_path" [src]="'https://image.tmdb.org/t/p/w500/' + pelicula.poster_path">
       </ion-card>
 
     </ion-slide>
   </ion-slides>
 
-  <h3>Mejor puntuación</h3>
+  <h5 class="sub-title">Mejor puntuación</h5>
   <ion-slides [options]="slideOpts">
-    <ion-slide class="space-slider" *ngFor="let pelicula of topRatedMovies">
+    <ion-slide class="poster" *ngFor="let pelicula of topRatedMovies">
       
       <ion-card (click)="verDetalle(pelicula.id)">
-        <img class="poster" [src]="pelicula.poster_path | imagen">
+        <img *ngIf="!pelicula.poster_path" src="/assets/no-image-banner.jpg">
+        <img *ngIf="pelicula.poster_path" [src]="'https://image.tmdb.org/t/p/w500/' + pelicula.poster_path">
         <h5>{{ pelicula.vote_average }}</h5>
       </ion-card>
 
