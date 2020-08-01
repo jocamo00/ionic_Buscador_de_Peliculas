@@ -31,7 +31,6 @@ export class Tab2Page {
     this.buscando = true;
     this.moviesService.searchMovies(valor)
       .subscribe( resp => {
-        console.log(resp);
         // tslint:disable-next-line:no-string-literal
         this.peliculas = resp['results'];
         this.buscando = false;
