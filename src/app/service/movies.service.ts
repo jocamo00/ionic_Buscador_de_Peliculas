@@ -36,10 +36,12 @@ export class MoviesService {
     return this.http.get<PeliculaDetalle>(`${URL}/movie/${id}?api_key=${apiKey}&language=es`);
   }
 
+
   getActorsMovies( id: string ) {
 
     return this.http.get<RespuestaCredits>(`${URL}/movie/${id}/credits?api_key=${apiKey}`);
   }
+
 
   searchMovies( texto: string) {
 
