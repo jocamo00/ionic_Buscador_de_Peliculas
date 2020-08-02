@@ -134,10 +134,13 @@ Muestra las peliculas resultado de la búsqueda
 
 ## Imagenes
 
+Página principal
 ![Screenshot](captura01.png)
-![Screenshot](ionic.jpg)
+
+Buscador
 ![Screenshot](captura02.png)
-![Screenshot](ionic.jpg)
+
+Página detalle
 ![Screenshot](captura03.png)
 
 
