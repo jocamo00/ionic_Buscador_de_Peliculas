@@ -128,12 +128,16 @@ Muestra las peliculas resultado de la búsqueda
   </ion-grid>
 ```
 
+## Video
+
+(https://www.youtube.com/watch?v=q00wMttq6JQ)
+
 ## Imagenes
 
 ![Screenshot](captura01.png)
-![Screenshot]()
+![Screenshot](ionic.jpg)
 ![Screenshot](captura02.png)
-![Screenshot]()
+![Screenshot](ionic.jpg)
 ![Screenshot](captura03.png)
 
 
