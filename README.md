@@ -131,7 +131,9 @@ Muestra las peliculas resultado de la búsqueda
 ## Imagenes
 
 ![Screenshot](captura01.png)
+![Screenshot]()
 ![Screenshot](captura02.png)
+![Screenshot]()
 ![Screenshot](captura03.png)
 
 
